@@ -1,17 +1,28 @@
 /* Hero****************************************** */
 
 .hero-title {
-  width: 670px;
+  // width: 670px;
+  width: 360px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
 
   font-weight: 900;
-  font-size: 44px;
-  line-height: calc(60 / 44);
+  font-size: 26px;
+    line-height: 1.62;
+    /* or 162% */
+  // font-size: 44px;
+  // line-height: calc(60 / 44);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--third-color);
+
+  @media screen and (min-width: 1200px) {
+    width: 670px;
+
+    font-size: 44px;
+    line-height: calc(60 / 44);
+    }
 }
 
 .hero-btn {
@@ -49,9 +60,34 @@
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero-bg.jpg);
+      url(../images/hero-bg-mob-1.jpg);
+  // background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  //   url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: var(--primary-text-color);
-}
+
+  @include retina {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../images/bg-img-mob-2x.jpg);
+      }
+
+  @media screen and (min-width: 768px) {
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-1.jpg);
+  @include retina{
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../images/bg-img-tablet-2x.jpg);
+      }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg.jpg);
+        @include retina {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+              url(../images/bg-img-dt-2x.jpg);
+          }
+  }
+    }

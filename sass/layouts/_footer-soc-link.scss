@@ -7,7 +7,12 @@
     justify-content: center;
     gap: 10px;
 }
+.footer-links{
+    
 
+    @media screen and (min-width: 480px) {
+            bottom: 60px;}
+}
 .footer-soc-link {
     width: 44px;
     height: 44px;

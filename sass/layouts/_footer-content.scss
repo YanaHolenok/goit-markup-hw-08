@@ -1,11 +1,21 @@
 .footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
     @media screen and (min-width: 1200px) {
         display: flex;
+        flex-direction: row;
         align-items: baseline;
         justify-content: space-between;
         
         }
+}
+.footer-inf-box{
+    @media screen and (min-width: 480px) {
+        margin-bottom: 60px;
+        }
+    
 }
 
 .footer {
@@ -26,15 +36,14 @@
     margin-bottom: 20px;
 }
 
-.logo-bottom {
-    margin-bottom: 20px;
-}
-
 .footer-accent {
     color: var(--accent-color);
 }
 
 .footer-address-box {
+    @media screen and (min-width: 480px) {
+            margin-bottom: 60px;
+        }
 
     @media screen and (min-width: 1200px) {
         width: 230px;
