@@ -1,0 +1,116 @@
+.team {
+    background-color: #f5f4fa;}
+    
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.cards__item{
+  width: 100%;
+
+@media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+.cards__description {
+    padding: 30px 0;
+
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        background: rgba(255, 255, 255, 1);
+        border-radius: 4px;
+}
+
+.cards__name {
+    
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    text-align: center;
+    color: var(--second-color);
+}
+.cards-name--resizing
+{margin-bottom: 10px;}
+
+.cards__text{
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    text-align: center;
+}
+
+.cards-text--resizing {
+    margin-bottom: 16px;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+// .link-list__link-item {
+//     width: calc((100% - 30px) / 4);
+// }
+.social__link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--third-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--icon-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+            background-color: var(--accent-color);
+            color: var(--third-color);
+        }
+}
+
+.social__icon {
+    fill: currentColor;
+}
+
+.about {
+  padding-top: 0;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+.about-list-items {
+  width: calc((100% - 60px) / 3);
+}
+/*  додаткова секція */
+.about-box {
+  position: relative;
+}
+.about-text {
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--third-color);
+}
+.text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+
+  position: absolute;
+  bottom: 0;
+}

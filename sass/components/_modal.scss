@@ -1,0 +1,227 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    width: 530px;
+    min-height: 580px;
+    background-color: var(--third-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+}
+
+.modal-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    color: var(--second-color);
+    margin-bottom: 12px;
+}
+
+.modal-input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), ;
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.modal-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 40px;
+    color: var(--accent-color);
+    outline: transparent;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+            border: 1px solid var(--accent-color);
+        }
+}
+
+
+
+.modal-input:focus+.modal-input-icon {
+    fill: var(--accent-color);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* comment */
+.modal-label-text {
+    font-weight: 400;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+    color: var(--primary-text-color);
+    display: block;
+    margin-bottom: 4px;
+
+}
+
+.modal-textarea {
+    display: block;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    padding: 12px 16px;
+    outline: transparent;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+            border: 1px solid var(--accent-color);
+        }
+    
+    &::placeholder {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.01em;
+            color: rgba(117, 117, 117, 0.5);
+        }
+}
+.form-texrarea-label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* checkbox *************/
+.checkbox-text {
+    font-weight: 400;
+    line-height: 1.71;
+    color: var(--primary-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+            width: 16px;
+            height: 15px;
+            border: 2px solid var(--second-color);
+            border-radius: 2px;
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            fill: transparent;
+            border-color: var(--second-color);
+    
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+}
+
+.checkbox-wrap-privacy {
+    margin-bottom: 30px;
+}
+
+/* 1 спосіб - через before*/
+/* .checkbox-text::before{
+content:"";
+width: 16px;
+height: 15px;
+border: 2px solid var(--second-color);
+border-radius: 2px;
+margin-right: 5px;
+} */
+/* .input-checkbox:checked + .checkbox-text::before{
+  background-color: var(--accent-color);
+  background-image: url(../images/Vector.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+/* .input-checkbox:checked + .checkbox-text::before{
+  border-color: var(--accent-color);
+} */
+.check-box-link {
+    line-height: 1.71;
+    color: var(--accent-color);
+    margin-left: 5px;
+}
+
+/* 2 спосіб через спрайт*/
+
+.input-checkbox:checked+.checkbox-text span {
+    background-color: var(--accent-color);
+    fill: var(--third-color);
+    border-color: transparent;
+}
+
+.input-checkbox:focus+.checkbox-text span {
+    border-color: var(--accent-color);
+}
+
+.modal-button-submit {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    padding: 10px 50px;
+
+    color: var(--third-color);
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: var(--accent-color);
+
+    margin: 0 auto;
+}
+
+/* .modal-button-submit:hover
+.modal-button-submit:focus{
+background: #2196F3;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
