@@ -10,8 +10,10 @@
 }
 
 .modal {
-    width: 530px;
-    min-height: 580px;
+    // width: 530px;
+    // min-height: 580px;
+    width: 450px;
+    min-height: 610px;
     background-color: var(--third-color);
     position: absolute;
     top: 50%;
@@ -22,6 +24,11 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 40px;
+    
+        @media screen and (min-width: 1200px) {
+            width: 530px;
+            min-height: 580px;
+        }
 }
 
 .modal-btn {
@@ -45,12 +52,20 @@
 }
 
 .modal-title {
+    text-align: center;
     font-weight: 700;
-    font-size: 20px;
-    line-height: calc(23 / 20);
+    // font-size: 20px;
+    // line-height: calc(23 / 20);
+    font-style: 20px;
+    line-height: calc(30 / 20);
     text-align: center;
     color: var(--second-color);
     margin-bottom: 12px;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 20px;
+            line-height: calc(23 / 20);
+        }
 }
 
 .modal-input-icon {
