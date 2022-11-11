@@ -30,16 +30,12 @@
               <span class="header-accent">Web</span>Studio
             </a>
             <!-- кнопка меню -->
-        <button
-          type="button"
-          class="mobile-btn mobile-btn--open"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg class="mobile-btn__icons" width="40" height="40" aria-label="Відкриває меню">
-            <use href="./images/icons.svg#icon-menu_mobile-on"></use>
+        <button type="button" class="mob-btn" data-menu-open>
+          <svg class="mob-svg" width="40" height="40">
+            <use href="./symbol-defs.svg#menu_mobile-on">
+            </use>
           </svg>
-          </button>
+        </button>
 
         <!-- лінки -->
             <ul class="header-nav-list list">
@@ -77,10 +73,14 @@
       </div>
     
       <!-- modal-menu -->
-      <div class="mob-menu is-hidden" data-menu>
+      <div class="mob-modal is-hidden" data-menu>
         <!-- <button type="button" class="menu-close-btn" data-menu-close>x</button> -->
-        <div class="container">
+        <div class="mob-menu container">
         <div class="mob-menu-top">
+        <button type="button" class="mob-close-btn" data-menu-close>
+            <svg class="" width="40" height="40">
+              <use href="./symbol-defs.svg#menu-mobile-off"></use>
+            </svg>
         <ul class="mob-nav-list list">
               <li class="mob-nav-item">
                 <a class="mob-nav-link link current" href="./index.html">Студія</a>
@@ -114,11 +114,7 @@
             <li class="mob-soc"><a class="mob-soc-link link" href=""></a>LinkedIn</li>
           </ul>
           </div>
-          <button type="button" class="mobile-btn mobile-btn--close">
-        <svg class="mobile-btn__icons" width="40" height="40" aria-label="Закриває меню">
-          <use href="./images/icons.svg#icon-menu-mobile-off"></use>
-        </svg>
-      </button>
+         
       </div>
     </header> 
     <main>
