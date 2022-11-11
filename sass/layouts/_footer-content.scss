@@ -28,6 +28,7 @@
     
         @media screen and (min-width: 1200px) {
             width: 230px;
+            text-align: left;
         }
 }
 
@@ -47,6 +48,10 @@
     color: var(--third-color);
 
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+            text-align: left;
+    }
 }
 
 .footer-accent {
@@ -83,10 +88,15 @@
     text-transform: uppercase;
     color: rgba(255, 255, 255, 1);
     margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+            text-align: left;
+        }
+    
 }
 .footer-tablet-box{
     @media screen and (min-width: 768px) {
             display: flex;
-                justify-content: space-around;
+            justify-content: space-around;
+            width: 100%;
         }
-}
+    }
