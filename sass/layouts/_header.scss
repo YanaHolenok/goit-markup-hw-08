@@ -7,18 +7,6 @@
         }
 }
 
-.menu {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-ul{
-    list-style: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-}
 .header-container {
 
 display: flex;
@@ -91,7 +79,7 @@ align-items: center;
     display: block;
 }
 }
-.header-nav-list {
+.menu {
     gap: 50px;
     align-items: center;
 }
