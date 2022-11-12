@@ -7,14 +7,11 @@
         }
 }
 
-.header-nav-list{
+.menu {
     display: flex;
-    align-items: center;
-    padding-left: 0;
-
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-        display: none;
-    }
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 ul{
     list-style: none;
@@ -198,28 +195,54 @@ align-items: center;
 
 
 // mob-link
+.menu-container{
+position: absolute;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+padding: 32px;
+background-color: #ECECEC;
+z-index:999;
 
-.mob-menu{
-    position: fixed;
-    top: 0;
-    background-color:#fff;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    >.container {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        overflow: auto;
-    }
+transform: translateX(100%);
 }
-.mob-btn {
-    margin-left: auto;
-    width: 40px;
-    height: 40px;
+.menu-container .is-open{
+    transform: translateX(0);
+}
+// .mob-menu{
+//     position: fixed;
+//     top: 0;
+//     background-color:#fff;
+//     width: 100vw;
+//     height: 100vh;
+//     z-index: 1;
+//     padding-top: 48px;
+//     padding-bottom: 48px;
+//     >.container {
+//         height: 100%;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//         overflow: auto;
+//     }
+// }
+.menu-toggle {
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+   
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+
     @include hover-accent();
 
     &__icons {
@@ -228,12 +251,13 @@ align-items: center;
     }
 }
 
-.menu-close-btn{
-    position: absolute;
-        top: 10px;
-        right: 15px;
-        z-index: 15;
-    // margin-left: auto; 
+.menu-container .menu-toggle{
+    color: #fff;
+}
+.mobile-menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 .mob-nav-item:not(:last-child){
 margin-bottom: 24px;
@@ -298,12 +322,3 @@ transform: rotate(90deg);
 
     color: var(--accent-color);
 }
-
-.menu-toggle{
-margin-left: auto;
-width: 40px;
-height: 40px;
-
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-

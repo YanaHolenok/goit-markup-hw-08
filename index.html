@@ -20,7 +20,7 @@
     <!--Style-->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body>
+  <body style="overflow: hidden;">
     <header class="header">
       <div class="container">
         <div class="header-container">
@@ -30,15 +30,18 @@
               <span class="header-accent">Web</span>Studio
             </a>
             <!-- кнопка меню -->
-        <button type="button" class="mob-btn" data-menu-open>
+        <button class="menu-toggle js-open-menu" 
+        aria-expanded="false"
+        aria-controls="mobile-menu">
+
           <svg class="mob-svg" width="40" height="40">
-            <use href="./symbol-defs.svg#menu_mobile-on">
+            <use href="./symbol-defs.svg#menu-mobile-on">
             </use>
           </svg>
         </button>
 
         <!-- лінки -->
-            <ul class="header-nav-list list">
+            <ul class="menu list">
               <li class="header-nav-item">
                 <a class="header-nav-link link current" href="./index.html">Студія</a>
               </li>
@@ -73,15 +76,13 @@
       </div>
     
       <!-- modal-menu -->
-      <div class="mob-modal is-hidden" data-menu>
-        <!-- <button type="button" class="menu-close-btn" data-menu-close>x</button> -->
-        <div class="mob-menu container">
+      <div class="menu-container js-menu-container" id="mobile-menu">
         <div class="mob-menu-top">
-        <button type="button" class="mob-close-btn" data-menu-close>
+        <button type="button" class="menu-toggle js-close-menu">
             <svg class="" width="40" height="40">
               <use href="./symbol-defs.svg#menu-mobile-off"></use>
             </svg>
-        <ul class="mob-nav-list list">
+        <ul class="mobile-menu list">
               <li class="mob-nav-item">
                 <a class="mob-nav-link link current" href="./index.html">Студія</a>
               </li>
@@ -669,5 +670,12 @@
     </div> 
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
