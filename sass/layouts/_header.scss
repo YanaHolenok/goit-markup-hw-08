@@ -2,6 +2,7 @@
 /* flex */
 .header-nav {
     display: flex;
+    align-items: center;
     @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding: 28px 0;
         }
@@ -44,11 +45,6 @@ align-items: center;
     display: block;
     margin-left: 0;
     margin-right: 90px;
-    padding: 15px;
-
-    @media screen and (min-width: 1200px) {
-        padding: 25px;
-        }
     }   
 
 .header-accent {
@@ -80,6 +76,7 @@ align-items: center;
 }
 }
 .menu {
+    display: flex;
     gap: 50px;
     align-items: center;
 }
@@ -184,6 +181,7 @@ align-items: center;
 
 // mob-link
 .menu-container{
+display: none;
 position: absolute;
 top: 0;
 left: 0;
@@ -216,27 +214,27 @@ transform: translateX(100%);
 //     }
 // }
 .menu-toggle {
+    display: none;
     min-width: 40px;
     min-height: 40px;
-    display: flex;
+
     align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
-   
+
     background-color: transparent;
     border: none;
     border-radius: 50%;
     outline: none;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
-
-    @include hover-accent();
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
     &__icons {
         fill: currentColor;
         background: transparent;
     }
+    
 }
 
 .menu-container .menu-toggle{
