@@ -110,15 +110,7 @@ justify-content: space-between;
             flex-direction: row;
         }}
 
-.contact-links {
-    @media screen and (min-width: 768px) {
-            margin-left: 96px;
-        }
-    @media screen and (min-width: 1200px) {
-        margin-right: 10px;
-        }
-    
-}
+
 
 .header-contacts .header-contacts-item+.header-contacts-item {
     @media screen and (min-width: 1200px) {
@@ -179,6 +171,8 @@ justify-content: space-between;
 // mob-link
 
 .menu-toggle {
+    position: absolute;
+    right: 15px;
     min-height: 40px;
     min-width: 40px;
     display: flex;
@@ -224,6 +218,14 @@ margin-bottom: 24px;
         letter-spacing: 0.02em;
     
         color: #212121;
+        &:hover,
+            &:focus {
+                color: var(--accent-color);
+            }
+
+}
+.current{
+    color: var(--accent-color);
 }
 .mob-nav-list{
     margin-bottom: 50px;
@@ -289,7 +291,8 @@ padding-right: 10px;
     margin-left: auto;
 }
 .menu-container {
-    position: fixed;
+    // position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
