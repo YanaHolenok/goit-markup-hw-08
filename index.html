@@ -30,13 +30,23 @@
               <span class="header-accent">Web</span>Studio
             </a>
             <!-- кнопка меню -->
-        <button class="menu-toggle js-open-menu" 
-        aria-expanded="false"
-        aria-controls="mobile-menu">
-
-          <svg class="mob-svg" width="40" height="40">
-            <use href="./symbol-defs.svg#menu-mobile-on">
-            </use>
+      <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
           </svg>
         </button>
 
@@ -78,10 +88,22 @@
       <!-- modal-menu -->
       <div class="menu-container js-menu-container" id="mobile-menu">
         <div class="mob-menu-top">
-        <button type="button" class="menu-toggle js-close-menu">
-            <svg class="" width="40" height="40">
-              <use href="./symbol-defs.svg#menu-mobile-off"></use>
-            </svg>
+      <button class="menu-toggle js-close-menu">
+        <svg
+        class="close-btn"
+       
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
         <ul class="mobile-menu list">
               <li class="mob-nav-item">
                 <a class="mob-nav-link link current" href="./index.html">Студія</a>
@@ -109,7 +131,7 @@
             </li>
           </ul>
           <ul class="mob-soc-list list">
-            <li class="mob-soc"><a class="mob-soc-link link" href="">Instagram</a></li>
+            <li class="mob-soc"><a class="mob-soc-link link" href=""></a>Instagram</li>
             <li class="mob-soc"><a class="mob-soc-link link" href=""></a>Twitter</li>
             <li class="mob-soc"><a class="mob-soc-link link" href=""></a>Facebook</li>
             <li class="mob-soc"><a class="mob-soc-link link" href=""></a>LinkedIn</li>
@@ -526,7 +548,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <div class="footer-contacts footer-tablet-box">
+          <div class="footer-contacts">
 
           <div class="footer-inf-box">
             <a class="logo-footer link" href="./index.html" lang="en">
@@ -536,12 +558,12 @@
             <address class="footer-address">м. Київ, пр-т Лесі Українки, 26</address>
             <ul class="footer-list list">
               <li class="footer-inf tel">
-                <a class="footer-contacts link" href="mailto:info@devstudio.com">
+                <a class="footer-links link" href="mailto:info@devstudio.com">
                   info@devstudio.com
                 </a>
               </li>
               <li class="footer-inf">
-                <a class="footer-contacts link" href="tel:+380961111111">+38 096 111 11 11</a>
+                <a class="footer-links link" href="tel:+380961111111">+38 096 111 11 11</a>
               </li>
             </ul>
             </div>
