@@ -8,9 +8,10 @@
     gap: 10px;
 }
 .footer-links{
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
+    @media screen and (min-width: 480px) {
+        margin-bottom: 60px;
+        }
+    }
 .footer-soc-link {
     width: 44px;
     height: 44px;
